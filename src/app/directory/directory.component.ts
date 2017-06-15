@@ -10,9 +10,7 @@ export class DirectoryComponent implements OnInit {
   ninjas = [
     { name: 'Yoshi', belt: 'black' },
     { name: 'Ryu', belt: 'red' },
-    { name: 'Crystal', belt: 'purple' },
-    // { name: '', belt: '' },
-    // { name: '', belt: '' }
+    { name: 'Crystal', belt: 'purple' }
   ]
 
   constructor() {}
