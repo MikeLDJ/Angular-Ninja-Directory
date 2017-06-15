@@ -1,4 +1,13 @@
-<h1>
-  {{title}}
-</h1>
-<app-home [ninja]="ninja" (onYell)="yell($event)">hello from ng-content</app-home>
+<header>
+  <h1>{{title}}</h1>
+  <nav>
+    <ul>
+      <li><a [routerLink]="['/']">Home</a></li>
+      <li><a [routerLink]="['directory']">Directory</a></li>
+    </ul>
+  </nav>
+</header>
+<section id="main">
+  <!--<app-home [ninja]="ninja" (onYell)="yell($event)">hello from ng-content</app-home>-->
+  <router-outlet></router-outlet>
+</section>
