@@ -5,8 +5,9 @@ import { DirectoryComponent } from './directory/directory.component'
 import { HomeComponent } from './home/home.component'
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'directory', component: DirectoryComponent },
-  { path: '', component: HomeComponent }
+  { path: 'directory/:ninja', component: DirectoryComponent }
 ];
 
 @NgModule({
