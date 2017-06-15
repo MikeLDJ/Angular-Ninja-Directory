@@ -1,4 +1,11 @@
-<p>
-  directory works!
-</p>
-<p>{{ninja}}</p>
+<h2>Ninja Listing</h2>
+
+<ul id="ninja-listing">
+  <li *ngFor="let ninja of ninjas">
+    <div class="single-ninja">
+      <span [ngStyle]="{background: ninja.belt}">{{ninja.belt}} belt</span>
+      <h3>{{ninja.name}}</h3>
+      <div (click)="remove($event)" [attr.data-name]="ninja.name">delete</div>
+    </div>
+  </li>
+</ul>
