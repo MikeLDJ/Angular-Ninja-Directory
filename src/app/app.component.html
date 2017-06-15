@@ -1,4 +1,4 @@
 <h1>
   {{title}}
 </h1>
-<app-home [ninja]="ninja">hello from ng-content</app-home>
+<app-home [ninja]="ninja" (onYell)="yell($event)">hello from ng-content</app-home>
