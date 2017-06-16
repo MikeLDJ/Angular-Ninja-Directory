@@ -7,7 +7,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core'
 })
 export class HomeComponent implements OnInit {
   homeTitle: string = 'Welcome to the ninja directory!'
-  myString: string = 'I like chicken'
   myBoolean: boolean = true
 
   @Input() ninja;
