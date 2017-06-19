@@ -12,3 +12,9 @@
     </div>
   </li>
 </ul>
+
+<form id="add-ninja">
+  <input type="text" [(ngModel)]="name" name="name">
+  <input type="text" [(ngModel)]="belt" name="belt">
+  <button (click)="fbPostData(name, belt)">Add Ninja</button>
+</form>

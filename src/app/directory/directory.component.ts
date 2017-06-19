@@ -15,16 +15,20 @@ export class DirectoryComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.dataService.fetchData()
-      .subscribe((data) => this.ninjas = data)
+    // this.dataService.fetchData()
+      // .subscribe((data) => this.ninjas = data)
 
     this.fbGetData()
   }
 
-fbGetData() {
-  firebase.database().ref('/').on('child_added', (snapshot) => {
-    console.log(snapshot.val())
-  })
-}
+  fbGetData() {
+    firebase.database().ref('/').on('child_added', (snapshot) => {
+      this.ninjas.push(snapshot.val())
+    })
+  }
+
+  fbPostData(name, belt) {
+    firebase.database().ref('/').push({name: name, belt: belt})
+  }
 
 }
