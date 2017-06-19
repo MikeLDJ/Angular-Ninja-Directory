@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { DataService } from '../data.service'
+declare var firebase: any;
 
 @Component({
   selector: 'app-directory',
@@ -16,6 +17,14 @@ export class DirectoryComponent implements OnInit {
   ngOnInit() {
     this.dataService.fetchData()
       .subscribe((data) => this.ninjas = data)
+
+    this.fbGetData()
   }
+
+fbGetData() {
+  firebase.database().ref('/').on('child_added', (snapshot) => {
+    console.log(snapshot.val())
+  })
+}
 
 }
