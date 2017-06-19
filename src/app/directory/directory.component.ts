@@ -11,13 +11,13 @@ declare var firebase: any;
 })
 export class DirectoryComponent implements OnInit {
   ninjas = []
+  term: string
+  belt: string
+  name: string
 
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    // this.dataService.fetchData()
-      // .subscribe((data) => this.ninjas = data)
-
     this.fbGetData()
   }
 

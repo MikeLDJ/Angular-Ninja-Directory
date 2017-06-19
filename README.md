@@ -1,4 +1,8 @@
-# AngularNinjaDirectory
+# Angular Ninja Directory
+
+to-do: add functionality to delete button.
+
+***
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.4.
 
